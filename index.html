@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sekai.css - from Social.css</title>
+  <link rel="stylesheet" href="css/sekai.css">
+</head>
+
+<body>
+  <section class="hero is-primary">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+          Sekai.css
+          <a href="https://github.com/mtsgi/social-css" target="_blank" rel="noopener noreferrer">
+            from Social.css
+          </a>
+        </h1>
+        <h2 class="subtitle">
+          <a href="https://github.com/mtsgi/sekai-css" target="_blank" rel="noopener noreferrer">
+            GitHub で見る
+          </a>
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <p class="subtitle">
+      Sekai.css は Bulma を拡張したCSSフレームワークです。
+    </p>
+
+    <h2 class="is-size-3 mb-3">Forms</h2>
+
+    <div class="field">
+      <div class="control">
+        <input class="input" type="text" placeholder="Input">
+      </div>
+    </div>
+
+    <div class="buttons mt-5">
+      <a class="button">Default</a>
+      <a class="button is-primary">Primary</a>
+      <a class="button is-link">Link</a>
+      <a class="button is-info">Info</a>
+    </div>
+
+    <div class="buttons">
+      <a class="button is-rounded">Default</a>
+      <a class="button is-rounded is-primary">Primary</a>
+      <a class="button is-rounded is-link">Link</a>
+      <a class="button is-rounded is-info">Info</a>
+    </div>
+
+    <div class="buttons">
+      <a class="button is-rounded" disabled>Default</a>
+      <a class="button is-rounded is-primary" disabled>Primary</a>
+      <a class="button is-rounded is-link" disabled>Link</a>
+      <a class="button is-rounded is-info" disabled>Info</a>
+    </div>
+
+    <div class="field">
+      <input class="is-checkradio" id="cb" type="checkbox" name="cb" checked="checked">
+      <label for="cb">Checkbox</label>
+    </div>
+
+    <div class="field">
+      <input class="is-checkradio is-medium" id="cb_medium" type="checkbox" name="cb_medium" checked="checked">
+      <label for="cb_medium">Checkbox - medium</label>
+    </div>
+
+    <div class="field">
+      <input class="is-checkradio" id="radio1" type="radio" name="radio" checked="checked">
+      <label for="radio1">Option 1</label>
+      <input class="is-checkradio" id="radio2" type="radio" name="radio">
+      <label for="radio2">Option 2</label>
+    </div>
+
+    <h2 class="is-size-3 mb-3">Modal</h2>
+
+    <p class="mb-5">クリックでモーダルを開きます</p>
+
+    <button class="button is-primary is-large is-rounded" kit-e="toggleModal">Open modal</button>
+
+    <div class="modal" kit:if="modal">
+      <div class="modal-background"></div>
+      <div class="modal-card mt-6">
+        <header class="modal-card-head">
+          <p class="modal-card-title">タイトル</p>
+          <button class="delete" aria-label="close" kit-e="toggleModal"></button>
+        </header>
+        <section class="modal-card-body">
+          モーダルの内容です。
+          <div class="field mt-3">
+            <input class="is-checkradio" id="cb_modal" type="checkbox" name="cb_modal">
+            <label for="cb_modal">チェックする</label>
+          </div>
+        </section>
+        <footer class="modal-card-foot">
+          <button kit-e="toggleModal" class="button is-rounded">Cancel</button>
+          <button kit-e="toggleModal" class="button is-rounded is-primary">OK</button>
+        </footer>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        <strong>Sekai.css</strong> by <a href="https://mtsgi.github.io">mtsgi</a>. The source code is licensed
+        <a href="http://opensource.org/licenses/mit-license.php">MIT</a>
+      </p>
+      <p>
+        This website is using <a href="https://mtsgi.github.io/kafjs">kaf.js</a>
+      </p>
+    </div>
+  </footer>
+
+  <script type="module">
+    import Kaf from 'https://mtsgi.github.io/kafjs/kaf.js';
+
+    const kaf = new Kaf({
+      elem: 'body',
+      locale: 'ja',
+      data: {
+        modal: false
+      },
+      events: {
+        toggleModal() { this.modal = !this.modal }
+      },
+      styles: {
+        "main": {
+          margin: "16px"
+        },
+        ".hero-body": {
+          padding: "16px",
+          "h1 a": {
+            color: "rgba(255, 255, 255, 0.75)",
+            textDecoration: "underline"
+          }
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>

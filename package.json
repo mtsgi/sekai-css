@@ -1,0 +1,18 @@
+{
+  "name": "sekai-css",
+  "version": "0.1.0",
+  "description": "sekai.css - from social.css",
+  "main": "css/sekai.css",
+  "repository": "https://github.com/mtsgi/sekai-css",
+  "author": "mtsgi <oq@live.jp>",
+  "dependencies": {
+    "bulma": "^0.9.1",
+    "bulma-checkradio": "^1.1.1",
+    "node-sass": "^4.14.1"
+  },
+  "scripts": {
+    "css-build": "node-sass --omit-source-map-url sass/sekai.scss css/sekai.css",
+    "css-watch": "yarn run css-build -- --watch",
+    "start": "yarn run css-watch"
+  }
+}
