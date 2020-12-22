@@ -1,5 +1,7 @@
 # [Social.css](https://github.com/mtsgi/social-css) / Sekai.css
 
+![Sekai.css](img/banner.png)
+
 Sekai.css は Bulma を拡張したCSSフレームワークです。
 
 [Social.css](https://github.com/mtsgi/social-css) ファミリーのプロダクトです。

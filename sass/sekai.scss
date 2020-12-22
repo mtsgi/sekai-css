@@ -1,3 +1,50 @@
 @charset "utf-8";
 @import "../node_modules/bulma/bulma.sass";
 @import "../node_modules/bulma-checkradio/dist/css/bulma-checkradio.sass";
+
+.button {
+  border: 2px solid #747799;
+  border-radius: 8px;
+  box-shadow: 0 0.2em 0 0 #747799, inset 0 0 0 0.2em #e9e8e9;
+  background-image: linear-gradient(180deg, #f6f6f6 0%, #ffffff 100%); 
+  padding: 0 1.5em;
+  line-height: 2;
+  height: auto;
+  transition: .1s all ease-in;
+  color: #443f67 !important;
+  &.is-primary {
+    border: 2px solid #747799;
+    background-image: linear-gradient(180deg, #00fffd 0%, #00ffc1 100%);
+    box-shadow: 0 0.2em 0 0 #747799, inset 0 0 0 0.2em #ffffff;
+  }
+  &.is-link {
+    border: 2px solid #747799;
+    color: #ffffff !important;
+    background: #8a88ac !important;
+    box-shadow: 0 0.2em 0 0 #747799, inset 0 0 0 0.2em #9a97bc;
+  }
+  &.is-info {
+    border: 2px solid #747799;
+    color: #464269 !important;
+    background: #ffffff !important;
+    box-shadow: 0 0.2em 0 0 #747799, inset 0 0 0 0.2em #e1e1e3;
+  }
+  &:hover,
+  &.is-primary:hover,
+  &.is-link:hover,
+  &.is-info:hover,
+  &.is-success:hover,
+  &.is-warning:hover {
+    transition: .2s all ease-out;
+    border: 2px solid #747799;
+    color: #363636;
+    transform: scale(0.95);
+  }
+}
+
+.input {
+  border-radius: 6px;
+  box-shadow: inset 0 2px 0 0 #d0ccd9;
+  border: 2px solid #9592a7;
+  background: #ffffff;
+}
